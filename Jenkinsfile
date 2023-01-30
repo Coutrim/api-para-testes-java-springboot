@@ -5,7 +5,7 @@ pipeline{
         stage('Build image'){
             steps{
                 script{
-                    dockerapp = docker.build("henriquecoutrim/api-java-springboot", '-f ./src/Dockerfile ./src')
+                    dockerapp = docker.build -t docker-whale
                 }
             }
         }
